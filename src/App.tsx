@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import { useTranslation } from 'react-i18next';
 import heroImage from './assets/hero.jpg';
 import MinimalHero from './components/MinimalHero';
 import SocialProof from './components/SocialProof';
@@ -9,7 +10,16 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import HelpWidget from './components/HelpWidget';
 
+import { useEffect } from 'react';
+
 function App() {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   const handleCtaClick = () => {
     // Scroll to the tours section or handle the CTA action
     const toursSection = document.getElementById('tours');
@@ -22,9 +32,9 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <MinimalHero
-        overline="EGYPT - TAILOR‑MADE JOURNEYS"
-        title="Unforgettable trips, crafted just for you."
-        ctaLabel="Plan my trip"
+        overline={t('hero.overline')}
+        title={t('hero.title')}
+        ctaLabel={t('hero.cta')}
         backgroundImageUrl={heroImage}
         onCtaClick={handleCtaClick}
       />
