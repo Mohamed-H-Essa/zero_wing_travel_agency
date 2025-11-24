@@ -1,3 +1,5 @@
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 interface MinimalHeroProps {
   overline: string;
   title: string;
@@ -13,49 +15,74 @@ export default function MinimalHero({
   backgroundImageUrl,
   onCtaClick,
 }: MinimalHeroProps) {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 200]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
   return (
     <section className="relative h-screen min-h-screen w-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center animate-subtle-zoom"
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
+          y,
         }}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent" />
 
       <div className="relative h-full flex items-center justify-center px-6 lg:justify-start lg:px-16 xl:px-24">
-        <div className="max-w-[600px] text-center lg:text-left animate-fade-in-up">
-          <p className="text-xs uppercase tracking-widest text-white/90 font-medium mb-4 lg:mb-6">
+        <div className="max-w-[800px] text-center lg:text-left">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm uppercase tracking-[0.2em] text-brand-gold font-medium mb-4 lg:mb-6"
+          >
             {overline}
-          </p>
+          </motion.p>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-8 lg:mb-10">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8 lg:mb-10 drop-shadow-lg"
+          >
             {title}
-          </h1>
+          </motion.h1>
 
-          <button
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={onCtaClick}
-            className="inline-block px-8 py-4 bg-white text-brand-dark font-semibold rounded-full transition-all duration-300 hover:bg-gray-100 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
+            className="inline-block px-10 py-5 bg-white text-brand-dark font-bold rounded-full transition-all duration-300 hover:bg-brand-gold hover:text-white hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/30"
           >
             {ctaLabel}
-          </button>
+          </motion.button>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle">
+      <motion.div 
+        style={{ opacity }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
         <svg
-          className="w-6 h-6 text-white/60"
+          className="w-8 h-8 text-white/80"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
+          strokeWidth="1.5"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
-      </div>
+      </motion.div>
     </section>
   );
 }
