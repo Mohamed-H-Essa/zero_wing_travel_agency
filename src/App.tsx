@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import heroImage from './assets/hero.jpg';
 import MinimalHero from './components/MinimalHero';
 import SocialProof from './components/SocialProof';
 import FeaturedTours from './components/FeaturedTours';
@@ -24,7 +25,7 @@ function App() {
         overline="EGYPT - TAILOR‑MADE JOURNEYS"
         title="Unforgettable trips, crafted just for you."
         ctaLabel="Plan my trip"
-        backgroundImageUrl="https://images.unsplash.com/photo-1539650116574-75c0c6d0e9db?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        backgroundImageUrl={heroImage}
         onCtaClick={handleCtaClick}
       />
       <SocialProof />
