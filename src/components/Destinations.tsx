@@ -38,7 +38,7 @@ export default function Destinations() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-sm text-brand-accent font-medium uppercase tracking-wider">
+                <span className="inline-block text-xs text-white font-semibold uppercase tracking-wider bg-brand-accent/90 px-3 py-1.5 rounded-full mb-2">
                   {destination.tours} {t('destinations.tours_available')}
                 </span>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">

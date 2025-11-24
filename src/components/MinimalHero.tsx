@@ -37,7 +37,7 @@ export default function MinimalHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm uppercase tracking-[0.2em] text-brand-accent font-medium mb-4 lg:mb-6"
+            className="text-sm uppercase tracking-[0.2em] text-white font-semibold mb-4 lg:mb-6 drop-shadow-lg"
           >
             {overline}
           </motion.p>
