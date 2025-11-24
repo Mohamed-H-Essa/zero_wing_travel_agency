@@ -60,7 +60,7 @@ export const tours = [
     price: 95,
     rating: 4.7,
     reviews: 198,
-    image: 'https://images.pexels.com/photos/14659226/pexels-photo-14659226.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/10727962/pexels-photo-10727962.jpeg?auto=compress&cs=tinysrgb&w=800',
     duration: '9 hours',
     location: 'Alexandria'
   },
@@ -79,22 +79,22 @@ export const destinations = [
   {
     id: 'cairo',
     tours: 28,
-    image: 'https://images.pexels.com/photos/3252924/pexels-photo-3252924.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/3873677/pexels-photo-3873677.jpeg',
   },
   {
     id: 'luxor',
     tours: 18,
-    image: 'https://images.pexels.com/photos/17361683/pexels-photo-17361683/free-photo-of-view-of-the-luxor-temple-in-egypt.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/21668633/pexels-photo-21668633.jpeg',
   },
   {
     id: 'aswan',
     tours: 15,
-    image: 'https://images.pexels.com/photos/17361670/pexels-photo-17361670/free-photo-of-temple-of-philae-in-aswan-egypt.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/15131485/pexels-photo-15131485.jpeg',
   },
   {
     id: 'hurghada',
     tours: 22,
-    image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/13034805/pexels-photo-13034805.jpeg',
   },
   {
     id: 'alexandria',
@@ -104,7 +104,7 @@ export const destinations = [
   {
     id: 'sharm',
     tours: 20,
-    image: 'https://images.pexels.com/photos/15849619/pexels-photo-15849619/free-photo-of-tropical-beach-in-sharm-el-sheikh-in-egypt.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/914055/pexels-photo-914055.jpeg',
   },
 ];
 
