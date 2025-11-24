@@ -10,7 +10,7 @@ export default function SocialProof() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {socialProofStats.map((stat) => (
             <div key={stat.id}>
-              <p className="text-3xl font-bold text-blue-600">
+              <p className="text-3xl font-bold text-brand-dark">
                 {stat.valueKey ? t(stat.valueKey) : stat.value}
               </p>
               <p className="text-sm text-gray-600 mt-1">

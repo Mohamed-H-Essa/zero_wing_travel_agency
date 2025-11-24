@@ -1,25 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { footerLinks, socialLinks } from '../data';
+import logo from '../assets/logo_with_bg_but_rounded.png';
 
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-brand-dark text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
-              </div>
-              <span className="text-xl font-bold text-white">Egypt Tours</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img src={logo} alt="Zero Wing Logo" className="h-12 w-12 rounded-full" />
+              <span className="text-xl font-serif font-bold text-white">Zero Wing</span>
             </div>
             <p className="text-gray-400 mb-4 leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
-                <a key={link.id} href={link.href} className="hover:text-blue-400 transition-colors">
+                <a key={link.id} href={link.href} className="hover:text-brand-gold transition-colors">
                   <link.icon size={20} />
                 </a>
               ))}
@@ -27,11 +26,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">{t('footer.quick_links')}</h3>
+            <h3 className="text-white font-serif font-semibold mb-4">{t('footer.quick_links')}</h3>
             <ul className="space-y-2">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="hover:text-blue-400 transition-colors">
+                  <a href={link.href} className="hover:text-brand-gold transition-colors">
                     {t(link.translationKey)}
                   </a>
                 </li>
@@ -40,11 +39,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">{t('footer.policies')}</h3>
+            <h3 className="text-white font-serif font-semibold mb-4">{t('footer.policies')}</h3>
             <ul className="space-y-2">
               {footerLinks.policies.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="hover:text-blue-400 transition-colors">
+                  <a href={link.href} className="hover:text-brand-gold transition-colors">
                     {t(link.translationKey)}
                   </a>
                 </li>
@@ -53,13 +52,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">{t('footer.contact_us')}</h3>
+            <h3 className="text-white font-serif font-semibold mb-4">{t('footer.contact_us')}</h3>
             <ul className="space-y-3">
               {footerLinks.contact.map((item) => (
                 <li key={item.id} className="flex items-center space-x-3">
                   <item.icon className="flex-shrink-0" size={18} />
                   {item.href ? (
-                    <a href={item.href} className="hover:text-blue-400 transition-colors">
+                    <a href={item.href} className="hover:text-brand-gold transition-colors">
                       {item.text}
                     </a>
                   ) : (

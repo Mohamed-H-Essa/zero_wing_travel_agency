@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import { navLinks } from '../data';
+import logo from '../assets/logo_without_bg.png';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -26,11 +27,9 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">E</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">Egypt Tours</span>
+          <div className="flex items-center space-x-3">
+            <img src={logo} alt="Zero Wing Logo" className="h-10 w-auto" />
+            <span className="text-xl font-serif font-bold text-brand-dark">Zero Wing</span>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
@@ -38,7 +37,7 @@ export default function Header() {
               <a
                 key={link.id}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-brand-gray hover:text-brand-gold transition-colors font-medium"
               >
                 {t(link.translationKey)}
               </a>
@@ -47,11 +46,11 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
-            <a href="tel:+201234567890" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="tel:+201234567890" className="flex items-center space-x-2 text-brand-gray hover:text-brand-gold transition-colors">
               <Phone size={18} />
               <span className="font-medium">+20 123 456 7890</span>
             </a>
-            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            <button className="bg-brand-dark text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-brand-gray transition-colors">
               {t('nav.book_now')}
             </button>
           </div>
@@ -60,7 +59,7 @@ export default function Header() {
             <LanguageSwitcher />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-brand-gray hover:text-brand-gold transition-colors"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -76,18 +75,18 @@ export default function Header() {
               <a
                 key={link.id}
                 href={link.href}
-                className="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-50 last:border-0"
+                className="block py-3 text-brand-gray hover:text-brand-gold font-medium border-b border-gray-50 last:border-0"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t(link.translationKey)}
               </a>
             ))}
             <div className="pt-4 space-y-4">
-              <a href="tel:+201234567890" className="flex items-center space-x-2 text-gray-700">
+              <a href="tel:+201234567890" className="flex items-center space-x-2 text-brand-gray">
                 <Phone size={18} />
                 <span className="font-medium">+20 123 456 7890</span>
               </a>
-              <button className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <button className="w-full bg-brand-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-gray transition-colors">
                 {t('nav.book_now')}
               </button>
             </div>

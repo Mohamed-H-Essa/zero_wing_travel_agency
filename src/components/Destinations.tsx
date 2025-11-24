@@ -9,7 +9,7 @@ export default function Destinations() {
     <section id="destinations" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-dark mb-4">
             {t('destinations.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -33,10 +33,10 @@ export default function Destinations() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-sm text-gray-300">
+                <span className="text-sm text-brand-gold font-medium">
                   {destination.tours} {t('destinations.tours_available')}
                 </span>
-                <h3 className="text-2xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-serif font-bold text-white mb-2">
                   {t(`destinations.items.${destination.id}.name`)}
                 </h3>
                 <p className="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">

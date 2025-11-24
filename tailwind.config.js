@@ -3,6 +3,17 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          dark: '#2F3437',
+          gray: '#4A5568',
+          gold: '#D4AF37', // Adding a gold accent for luxury feel
+        },
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
       animation: {
         'subtle-zoom': 'subtle-zoom 20s ease-in-out infinite alternate',
         'fade-in-up': 'fade-in-up 1s ease-out',

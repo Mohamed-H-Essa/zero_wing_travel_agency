@@ -9,7 +9,7 @@ export default function FeaturedTours() {
     <section id="tours" className="py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-dark mb-4">
             {t('featured_tours.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -30,7 +30,7 @@ export default function FeaturedTours() {
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
-                  <Star className="text-yellow-400 fill-current" size={16} />
+                  <Star className="text-brand-gold fill-current" size={16} />
                   <span className="font-bold text-gray-900">{tour.rating}</span>
                   <span className="text-gray-500 text-sm">({tour.reviews})</span>
                 </div>
@@ -48,7 +48,7 @@ export default function FeaturedTours() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-serif font-bold text-brand-dark mb-2">
                   {t(`featured_tours.items.${tour.id}.title`)}
                 </h3>
                 <p className="text-gray-600 mb-6 line-clamp-2">
@@ -58,10 +58,10 @@ export default function FeaturedTours() {
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div>
                     <span className="text-sm text-gray-500">{t('featured_tours.from')}</span>
-                    <span className="text-2xl font-bold text-blue-600">${tour.price}</span>
+                    <span className="text-2xl font-bold text-brand-dark">${tour.price}</span>
                     <span className="text-sm text-gray-500">{t('featured_tours.per_person')}</span>
                   </div>
-                  <button className="flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group/btn">
+                  <button className="flex items-center space-x-2 text-brand-dark font-semibold hover:text-brand-gold transition-colors group/btn">
                     <span>{t('featured_tours.view_details')}</span>
                     <ArrowRight
                       size={18}
@@ -75,7 +75,7 @@ export default function FeaturedTours() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+          <button className="bg-brand-dark text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-gray transition-colors shadow-lg hover:shadow-xl">
             {t('featured_tours.view_all')}
           </button>
         </div>

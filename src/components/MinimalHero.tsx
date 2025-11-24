@@ -30,13 +30,13 @@ export default function MinimalHero({
             {overline}
           </p>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8 lg:mb-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-8 lg:mb-10">
             {title}
           </h1>
 
           <button
             onClick={onCtaClick}
-            className="inline-block px-8 py-4 bg-[#FF8A3D] text-white font-semibold rounded-full transition-all duration-300 hover:bg-[#E67A2D] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#FF8A3D]/50"
+            className="inline-block px-8 py-4 bg-white text-brand-dark font-semibold rounded-full transition-all duration-300 hover:bg-gray-100 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-white/50"
           >
             {ctaLabel}
           </button>
