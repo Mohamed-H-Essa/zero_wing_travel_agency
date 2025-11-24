@@ -5,44 +5,37 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: '#2F3437',
-          gray: '#4A5568',
-          gold: '#D4AF37', // Adding a gold accent for luxury feel
+          primary: '#04323D', // Dark Teal
+          secondary: '#204E5A', // Dark Teal 2
+          accent: '#B19385', // Dusty Taupe
+          neutral: '#8EA7B0', // Cool Steel
+          dark: '#191B1F', // Carbon Black
+          // Legacy support (mapping to new palette)
+          gold: '#B19385',
+          gray: '#8EA7B0',
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
+        serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
       animation: {
-        'subtle-zoom': 'subtle-zoom 20s ease-in-out infinite alternate',
-        'fade-in-up': 'fade-in-up 1s ease-out',
-        'bounce-subtle': 'bounce-subtle 2s infinite',
+        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+        'subtle-zoom': 'subtleZoom 20s infinite alternate',
+        'bounce-subtle': 'bounceSubtle 2s infinite',
       },
       keyframes: {
-        'subtle-zoom': {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        subtleZoom: {
           '0%': { transform: 'scale(1)' },
-          '100%': { transform: 'scale(1.05)' },
+          '100%': { transform: 'scale(1.1)' },
         },
-        'fade-in-up': {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(30px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        'bounce-subtle': {
-          '0%, 100%': {
-            transform: 'translateY(0)',
-            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
-          },
-          '50%': {
-            transform: 'translateY(-10px)',
-            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
-          },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(-25%)' },
+          '50%': { transform: 'translateY(0)' },
         },
       },
     },

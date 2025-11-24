@@ -29,7 +29,7 @@ export default function MinimalHero({
         }}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/40 to-transparent" />
 
       <div className="relative h-full flex items-center justify-center px-6 lg:justify-start lg:px-16 xl:px-24">
         <div className="max-w-[800px] text-center lg:text-left">
@@ -37,7 +37,7 @@ export default function MinimalHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm uppercase tracking-[0.2em] text-brand-gold font-medium mb-4 lg:mb-6"
+            className="text-sm uppercase tracking-[0.2em] text-brand-accent font-medium mb-4 lg:mb-6"
           >
             {overline}
           </motion.p>
@@ -58,7 +58,7 @@ export default function MinimalHero({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onCtaClick}
-            className="inline-block px-10 py-5 bg-white text-brand-dark font-bold rounded-full transition-all duration-300 hover:bg-brand-gold hover:text-white hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/30"
+            className="inline-block px-10 py-5 bg-brand-accent text-white font-bold rounded-full transition-all duration-300 hover:bg-white hover:text-brand-primary hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-accent/30"
           >
             {ctaLabel}
           </motion.button>

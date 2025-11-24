@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { faqs } from '../data';
 
 export default function FAQ() {
@@ -11,29 +12,33 @@ export default function FAQ() {
     <section id="faqs" className="py-16 lg:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-dark mb-4">
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-primary mb-4">
             {t('faq.title')}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-brand-secondary/80">
             {t('faq.subtitle')}
           </p>
         </div>
 
         <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={faq.id}
-              className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-brand-gold/50 transition-colors"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="bg-brand-neutral/5 rounded-xl overflow-hidden border border-brand-neutral/20 hover:border-brand-accent/50 transition-colors"
             >
               <button
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-brand-neutral/10 transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-semibold text-brand-dark pr-8">
+                <span className="font-semibold text-brand-primary pr-8">
                   {t(`faq.items.${faq.id}.question`)}
                 </span>
                 <ChevronDown
-                  className={`text-brand-dark flex-shrink-0 transition-transform duration-300 ${
+                  className={`text-brand-primary flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   size={20}
@@ -44,18 +49,25 @@ export default function FAQ() {
                   openIndex === index ? 'max-h-48' : 'max-h-0'
                 }`}
               >
-                <p className="px-6 pb-5 text-gray-600 leading-relaxed">
+                <p className="px-6 pb-5 text-brand-secondary/70 leading-relaxed">
                   {t(`faq.items.${faq.id}.answer`)}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div id="contact" className="bg-brand-dark/5 rounded-xl p-8 text-center border-2 border-brand-dark/10">
-          <MessageCircle className="mx-auto text-brand-dark mb-4" size={40} />
-          <h3 className="text-xl font-serif font-bold text-brand-dark mb-2">{t('faq.still_questions')}</h3>
-          <p className="text-gray-600 mb-6">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          id="contact" 
+          className="bg-brand-neutral/10 rounded-xl p-8 text-center border-2 border-brand-neutral/20"
+        >
+          <MessageCircle className="mx-auto text-brand-primary mb-4" size={40} />
+          <h3 className="text-xl font-serif font-bold text-brand-primary mb-2">{t('faq.still_questions')}</h3>
+          <p className="text-brand-secondary/70 mb-6">
             {t('faq.contact_subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -70,12 +82,12 @@ export default function FAQ() {
             </a>
             <a
               href="mailto:info@egypttours.com"
-              className="bg-brand-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-gray transition-colors"
+              className="bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-secondary transition-colors"
             >
               {t('faq.email')}
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

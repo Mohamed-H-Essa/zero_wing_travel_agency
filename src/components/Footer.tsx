@@ -5,7 +5,7 @@ import logo from '../assets/logo_with_bg_but_rounded.png';
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="bg-brand-dark text-gray-300">
+    <footer className="bg-brand-primary text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -13,12 +13,12 @@ export default function Footer() {
               <img src={logo} alt="Zero Wing Logo" className="h-12 w-12 rounded-full" />
               <span className="text-xl font-serif font-bold text-white">Zero Wing</span>
             </div>
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <p className="text-brand-neutral mb-4 leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
-                <a key={link.id} href={link.href} className="hover:text-brand-gold transition-colors">
+                <a key={link.id} href={link.href} className="hover:text-brand-accent transition-colors">
                   <link.icon size={20} />
                 </a>
               ))}
@@ -30,7 +30,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="hover:text-brand-gold transition-colors">
+                  <a href={link.href} className="hover:text-brand-accent transition-colors">
                     {t(link.translationKey)}
                   </a>
                 </li>
@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.policies.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="hover:text-brand-gold transition-colors">
+                  <a href={link.href} className="hover:text-brand-accent transition-colors">
                     {t(link.translationKey)}
                   </a>
                 </li>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={item.id} className="flex items-center space-x-3">
                   <item.icon className="flex-shrink-0" size={18} />
                   {item.href ? (
-                    <a href={item.href} className="hover:text-brand-gold transition-colors">
+                    <a href={item.href} className="hover:text-brand-accent transition-colors">
                       {item.text}
                     </a>
                   ) : (
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-brand-secondary pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center space-x-6 text-sm">
               <div className="flex items-center space-x-2">
@@ -83,7 +83,7 @@ export default function Footer() {
                 <span className="font-semibold">{t('footer.licensed_guides')}</span>
               </div>
             </div>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-brand-neutral">
               {t('footer.copyright')}
             </p>
           </div>
