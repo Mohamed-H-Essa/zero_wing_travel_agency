@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import { faqs } from '../data';
 
 export default function FAQ() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as 'en' | 'ar';
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -35,7 +36,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-semibold text-brand-primary pr-8">
-                  {t(`faq.items.${faq.id}.question`)}
+                  {faq.content[lang].question}
                 </span>
                 <ChevronDown
                   className={`text-brand-primary flex-shrink-0 transition-transform duration-300 ${
@@ -50,7 +51,7 @@ export default function FAQ() {
                 }`}
               >
                 <p className="px-6 pb-5 text-brand-secondary/70 leading-relaxed">
-                  {t(`faq.items.${faq.id}.answer`)}
+                  {faq.content[lang].answer}
                 </p>
               </div>
             </motion.div>

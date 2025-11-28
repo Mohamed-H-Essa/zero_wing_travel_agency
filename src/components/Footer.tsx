@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
-                <a key={link.id} href={link.href} className="hover:text-brand-accent transition-colors">
+                <a key={link.id} href={link.href} target='_blank' className="hover:text-brand-accent transition-colors">
                   <link.icon size={20} />
                 </a>
               ))}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { contactInfo } from '../data';
 
 export default function HelpWidget() {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ export default function HelpWidget() {
 
           <div className="p-6 space-y-4">
             <a
-              href="https://wa.me/201234567890"
+              href={contactInfo.whatsapp.link}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-green-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors text-center"
@@ -35,14 +36,14 @@ export default function HelpWidget() {
             </a>
 
             <a
-              href="mailto:info@egypttours.com"
+              href={contactInfo.email.link}
               className="block w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
             >
               {t('help_widget.email')}
             </a>
 
             <a
-              href="tel:+201234567890"
+              href={contactInfo.phone.link}
               className="block w-full bg-gray-900 text-white px-4 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center"
             >
               {t('help_widget.call')}

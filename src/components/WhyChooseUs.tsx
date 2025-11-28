@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { features } from '../data';
 
 export default function WhyChooseUs() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as 'en' | 'ar';
 
   return (
     <section id="about" className="py-16 lg:py-24 bg-brand-neutral/5">
@@ -31,10 +32,10 @@ export default function WhyChooseUs() {
                 <feature.icon className="text-brand-primary" size={28} />
               </div>
               <h3 className="text-xl font-serif font-bold text-brand-primary mb-3">
-                {t(`why_choose_us.items.${feature.id}.title`)}
+                {feature.content[lang].title}
               </h3>
               <p className="text-brand-secondary/70 leading-relaxed">
-                {t(`why_choose_us.items.${feature.id}.description`)}
+                {feature.content[lang].description}
               </p>
             </motion.div>
           ))}

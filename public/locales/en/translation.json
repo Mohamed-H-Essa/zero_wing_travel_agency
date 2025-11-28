@@ -26,64 +26,12 @@
     "from": "From ",
     "per_person": " /person",
     "view_details": "View Details",
-    "view_all": "View All Tours",
-    "items": {
-      "pyramids": {
-        "title": "Pyramids of Giza & Egyptian Museum",
-        "description": "Explore the last remaining wonder of the ancient world with an expert Egyptologist guide."
-      },
-      "nile_cruise": {
-        "title": "Nile River Cruise & Dinner",
-        "description": "Enjoy a magical evening cruise with traditional entertainment and authentic Egyptian cuisine."
-      },
-      "luxor": {
-        "title": "Luxor Temple & Valley of the Kings",
-        "description": "Discover the magnificent temples and royal tombs in the ancient city of Thebes."
-      },
-      "red_sea": {
-        "title": "Red Sea Snorkeling Adventure",
-        "description": "Dive into crystal-clear waters and explore vibrant coral reefs and marine life."
-      },
-      "alexandria": {
-        "title": "Alexandria Historical Tour",
-        "description": "Visit the Bibliotheca Alexandrina, Citadel of Qaitbay, and Roman amphitheater."
-      },
-      "abu_simbel": {
-        "title": "Abu Simbel Temples Day Trip",
-        "description": "Marvel at Ramses II's colossal temples carved into the mountainside."
-      }
-    }
+    "view_all": "View All Tours"
   },
   "destinations": {
     "title": "Explore Egypt's Treasures",
     "subtitle": "From ancient wonders to pristine beaches, discover the best destinations Egypt has to offer",
-    "tours_available": " tours available",
-    "items": {
-      "cairo": {
-        "name": "Cairo",
-        "description": "Ancient pyramids & vibrant culture"
-      },
-      "luxor": {
-        "name": "Luxor",
-        "description": "Valley of the Kings & temples"
-      },
-      "aswan": {
-        "name": "Aswan",
-        "description": "Nubian culture & Nile beauty"
-      },
-      "hurghada": {
-        "name": "Hurghada",
-        "description": "Red Sea diving & beaches"
-      },
-      "alexandria": {
-        "name": "Alexandria",
-        "description": "Mediterranean charm & history"
-      },
-      "sharm": {
-        "name": "Sharm El Sheikh",
-        "description": "Resort paradise & coral reefs"
-      }
-    }
+    "tours_available": " tours available"
   },
   "why_choose_us": {
     "title": "Why Choose Zero Wing",
@@ -91,33 +39,7 @@
     "cta_title": "Ready to Start Your Egyptian Adventure?",
     "cta_subtitle": "Join thousands of travelers who've explored Egypt with us. Let our experts craft your perfect journey.",
     "plan_trip": "Plan My Trip",
-    "view_all": "View All Tours",
-    "items": {
-      "small_group": {
-        "title": "Small Group Tours",
-        "description": "Maximum 12 travelers per tour for a personalized, intimate experience with your expert guide."
-      },
-      "expert_guides": {
-        "title": "Expert Local Guides",
-        "description": "Licensed Egyptologists and certified guides with deep knowledge and passion for their heritage."
-      },
-      "support": {
-        "title": "24/7 Support",
-        "description": "Round-the-clock customer support throughout your journey for complete peace of mind."
-      },
-      "price_guarantee": {
-        "title": "Best Price Guarantee",
-        "description": "We match or beat any competitor price with our transparent, no hidden fees policy."
-      },
-      "customizable": {
-        "title": "Customizable Itineraries",
-        "description": "Tailor your adventure to your interests, pace, and budget with our flexible planning."
-      },
-      "secure_payments": {
-        "title": "Secure Payments",
-        "description": "Protected transactions with flexible payment options and free cancellation up to 48 hours."
-      }
-    }
+    "view_all": "View All Tours"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -125,33 +47,7 @@
     "still_questions": "Still have questions?",
     "contact_subtitle": "Our travel specialists are here to help plan your perfect Egyptian adventure",
     "whatsapp": "WhatsApp Us",
-    "email": "Email Us",
-    "items": {
-      "visa": {
-        "question": "Do I need a visa to visit Egypt?",
-        "answer": "Most visitors can obtain a visa on arrival at Egyptian airports for $25 USD. Alternatively, you can apply for an e-visa online before your trip. We provide detailed visa information and assistance with your booking."
-      },
-      "best_time": {
-        "question": "What is the best time to visit Egypt?",
-        "answer": "The ideal time is October to April when temperatures are mild (15-25°C). Summer months (May-September) can be very hot, especially in Upper Egypt. We operate year-round and can recommend the best times for specific destinations."
-      },
-      "families": {
-        "question": "Are your tours suitable for families with children?",
-        "answer": "Absolutely! Many of our tours are family-friendly. We can customize itineraries to suit children of all ages, with engaging activities and comfortable pacing. Our guides are experienced in making history come alive for young travelers."
-      },
-      "included": {
-        "question": "What is included in the tour price?",
-        "answer": "Our tour prices include expert guides, entrance fees, transportation, and specified meals. International flights, personal expenses, tips, and optional activities are not included. Full details are provided on each tour page."
-      },
-      "safety": {
-        "question": "Is Egypt safe for tourists?",
-        "answer": "Yes, Egypt is safe for tourists. We work with trusted local partners, follow security protocols, and monitor destinations closely. Our guides are trained in safety procedures and tourist areas have strong security presence."
-      },
-      "cancellation": {
-        "question": "What's your cancellation policy?",
-        "answer": "Free cancellation up to 48 hours before your tour for a full refund. Cancellations within 48 hours are subject to a 50% charge. We recommend travel insurance for added protection. Full terms are available during booking."
-      }
-    }
+    "email": "Email Us"
   },
   "footer": {
     "description": "Creating unforgettable Egyptian adventures since 2012. Your trusted partner for authentic cultural experiences.",

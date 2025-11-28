@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { destinations } from '../data';
 
 export default function Destinations() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as 'en' | 'ar';
 
   return (
     <section id="destinations" className="py-16 lg:py-24 bg-white">
@@ -22,34 +23,39 @@ export default function Destinations() {
           {destinations.map((destination, index) => (
             <motion.div
               key={destination.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 isolation-isolate [mask-image:radial-gradient(white,black)]"
             >
               <div className="absolute inset-0">
                 <img
                   src={destination.image}
-                  alt={t(`destinations.items.${destination.id}.name`)}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  alt={destination.content[lang].name}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 will-change-transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
                 <span className="inline-block text-xs text-white font-semibold uppercase tracking-wider bg-brand-accent/90 px-3 py-1.5 rounded-full mb-2">
                   {destination.tours} {t('destinations.tours_available')}
                 </span>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                  {t(`destinations.items.${destination.id}.name`)}
+                  {destination.content[lang].name}
                 </h3>
-                <p className="text-brand-neutral mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                  {t(`destinations.items.${destination.id}.description`)}
-                </p>
-                <div className="flex items-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                  <span>Explore</span>
-                  <ArrowRight size={18} className="ml-2 text-brand-accent" />
+                
+                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300">
+                  <div className="overflow-hidden">
+                    <p className="text-gray-200 mb-4 pt-2">
+                      {destination.content[lang].description}
+                    </p>
+                    <div className="flex items-center text-white font-semibold">
+                      <span>Explore</span>
+                      <ArrowRight size={18} className="ml-2 text-brand-accent" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
