@@ -22,17 +22,17 @@ export default function Destinations() {
           {destinations.map((destination, index) => (
             <motion.div
               key={destination.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <div className="absolute inset-0">
                 <img
                   src={destination.image}
                   alt={t(`destinations.items.${destination.id}.name`)}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 will-change-transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
               </div>

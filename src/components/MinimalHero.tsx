@@ -50,12 +50,13 @@ export default function MinimalHero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8 lg:mb-10 drop-shadow-lg"
+            className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8 lg:mb-10 drop-shadow-lg [text-wrap:balance]"
           >
             {title}
           </motion.h1>
 
           <motion.button
+            layout
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
