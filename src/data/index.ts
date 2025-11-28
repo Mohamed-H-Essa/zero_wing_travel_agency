@@ -402,8 +402,8 @@ export const contactInfo = {
     link: 'tel:+201028959236'
   },
   email: {
-    display: 'info@egypttours.com',
-    link: 'mailto:info@egypttours.com'
+    display: 'contact@zerowingegypt.com',
+    link: 'mailto:contact@zerowingegypt.com'
   },
   whatsapp: {
     link: 'https://wa.me/201028959236'
