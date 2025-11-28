@@ -126,10 +126,29 @@ export const faqs = [
   { id: 'cancellation' },
 ];
 
+export const contactInfo = {
+  phone: {
+    display: '+20 123 456 7890',
+    link: 'tel:+201234567890'
+  },
+  email: {
+    display: 'info@egypttours.com',
+    link: 'mailto:info@egypttours.com'
+  },
+  whatsapp: {
+    link: 'https://wa.me/201234567890'
+  },
+  social: {
+    facebook: '#',
+    instagram: '#',
+    twitter: '#'
+  }
+};
+
 export const socialLinks = [
-  { id: 'facebook', icon: Facebook, href: '#' },
-  { id: 'instagram', icon: Instagram, href: '#' },
-  { id: 'twitter', icon: Twitter, href: '#' },
+  { id: 'facebook', icon: Facebook, href: contactInfo.social.facebook },
+  { id: 'instagram', icon: Instagram, href: contactInfo.social.instagram },
+  { id: 'twitter', icon: Twitter, href: contactInfo.social.twitter },
 ];
 
 export const footerLinks = {
@@ -148,8 +167,7 @@ export const footerLinks = {
     { id: 'insurance', href: '#', translationKey: 'footer.links.insurance' },
   ],
   contact: [
-    { id: 'address', icon: MapPin, text: '123 Tahrir Square, Cairo, Egypt', href: null },
-    { id: 'phone', icon: Phone, text: '+20 123 456 7890', href: 'tel:+201234567890' },
-    { id: 'email', icon: Mail, text: 'info@egypttours.com', href: 'mailto:info@egypttours.com' },
+    { id: 'phone', icon: Phone, text: contactInfo.phone.display, href: contactInfo.phone.link },
+    { id: 'email', icon: Mail, text: contactInfo.email.display, href: contactInfo.email.link },
   ]
 };

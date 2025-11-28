@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 
 import LanguageSwitcher from './LanguageSwitcher';
-import { navLinks } from '../data';
+import { navLinks, contactInfo } from '../data';
 import logo from '../assets/logo_without_bg.png';
 
 export default function Header() {
@@ -47,9 +47,9 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
-            <a href="tel:+201234567890" className="flex items-center space-x-2 text-white/90 hover:text-brand-accent transition-colors">
+            <a href={contactInfo.phone.link} className="flex items-center space-x-2 text-white/90 hover:text-brand-accent transition-colors">
               <Phone size={18} />
-              <span className="font-medium">+20 123 456 7890</span>
+              <span className="font-medium">{contactInfo.phone.display}</span>
             </a>
             <button className="bg-brand-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors">
               {t('nav.book_now')}
@@ -88,9 +88,9 @@ export default function Header() {
               </a>
             ))}
             <div className="pt-4 space-y-4">
-              <a href="tel:+201234567890" className="flex items-center space-x-2 text-white/90">
+              <a href={contactInfo.phone.link} className="flex items-center space-x-2 text-white/90">
                 <Phone size={18} />
-                <span className="font-medium">+20 123 456 7890</span>
+                <span className="font-medium">{contactInfo.phone.display}</span>
               </a>
               <button className="w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors">
                 {t('nav.book_now')}
