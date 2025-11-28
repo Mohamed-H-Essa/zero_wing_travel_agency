@@ -8,6 +8,7 @@ export default function LanguageSwitcher() {
     const newLang = i18n.language === 'en' ? 'ar' : 'en';
     i18n.changeLanguage(newLang);
   };
+  return <>  </>;
 
   return (
     <button
