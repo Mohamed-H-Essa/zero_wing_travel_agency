@@ -398,19 +398,19 @@ export const faqs = [
 
 export const contactInfo = {
   phone: {
-    display: '+20 123 456 7890',
-    link: 'tel:+201234567890'
+    display: '+20 102 895 9236',
+    link: 'tel:+201028959236'
   },
   email: {
     display: 'info@egypttours.com',
     link: 'mailto:info@egypttours.com'
   },
   whatsapp: {
-    link: 'https://wa.me/201234567890'
+    link: 'https://wa.me/201028959236'
   },
   social: {
     facebook: '#',
-    instagram: '#',
+    instagram: 'https://www.instagram.com/zerowing_egy?utm_source=qr',
     twitter: '#'
   }
 };
