@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { destinations } from '../data';
 
 export default function Destinations() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as 'en' | 'ar';
 
   return (
     <section id="destinations" className="py-16 lg:py-24 bg-white">
@@ -31,7 +32,7 @@ export default function Destinations() {
               <div className="absolute inset-0">
                 <img
                   src={destination.image}
-                  alt={t(`destinations.items.${destination.id}.name`)}
+                  alt={destination.content[lang].name}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 will-change-transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
@@ -42,13 +43,13 @@ export default function Destinations() {
                   {destination.tours} {t('destinations.tours_available')}
                 </span>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                  {t(`destinations.items.${destination.id}.name`)}
+                  {destination.content[lang].name}
                 </h3>
                 
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300">
                   <div className="overflow-hidden">
                     <p className="text-gray-200 mb-4 pt-2">
-                      {t(`destinations.items.${destination.id}.description`)}
+                      {destination.content[lang].description}
                     </p>
                     <div className="flex items-center text-white font-semibold">
                       <span>Explore</span>

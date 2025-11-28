@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { tours } from '../data';
 
 export default function FeaturedTours() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as 'en' | 'ar';
 
   return (
     <section id="tours" className="py-16 lg:py-24 bg-brand-neutral/10">
@@ -31,7 +32,7 @@ export default function FeaturedTours() {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={tour.image}
-                  alt={t(`featured_tours.items.${tour.id}.title`)}
+                  alt={tour.content[lang].title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 shadow-sm">
@@ -54,10 +55,10 @@ export default function FeaturedTours() {
                 </div>
 
                 <h3 className="text-xl font-serif font-bold text-brand-primary mb-2">
-                  {t(`featured_tours.items.${tour.id}.title`)}
+                  {tour.content[lang].title}
                 </h3>
                 <p className="text-brand-secondary/70 mb-6 line-clamp-2">
-                  {t(`featured_tours.items.${tour.id}.description`)}
+                  {tour.content[lang].description}
                 </p>
 
                 <div className="flex items-center justify-between pt-4 border-t border-brand-neutral/10">
