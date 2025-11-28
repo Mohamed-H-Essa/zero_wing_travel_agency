@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { faqs } from '../data';
+import { faqs, contactInfo } from '../data';
 
 export default function FAQ() {
   const { t, i18n } = useTranslation();
@@ -73,7 +73,7 @@ export default function FAQ() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/201234567890"
+              href={contactInfo.whatsapp.link}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-flex items-center space-x-2"
@@ -82,7 +82,7 @@ export default function FAQ() {
               <span>{t('faq.whatsapp')}</span>
             </a>
             <a
-              href="mailto:info@egypttours.com"
+              href={contactInfo.email.link}
               className="bg-brand-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-secondary transition-colors"
             >
               {t('faq.email')}
