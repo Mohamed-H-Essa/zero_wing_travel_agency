@@ -20,14 +20,18 @@ export default function MinimalHero({
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative h-screen min-h-screen w-full overflow-hidden">
+    <section className="relative h-screen min-h-screen w-full overflow-hidden bg-brand-primary">
       <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImageUrl})`,
-          y,
-        }}
-      />
+        className="absolute inset-0"
+        style={{ y }}
+      >
+        <img
+          src={backgroundImageUrl}
+          alt="Hero Background"
+          className="h-full w-full object-cover"
+          loading="eager"
+        />
+      </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/40 to-transparent" />
 
