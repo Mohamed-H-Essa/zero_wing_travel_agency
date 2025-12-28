@@ -44,7 +44,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.id}
-                href={link.href}
+                href={isHomePage ? link.href : `/${link.href}`}
                 className="text-white/90 hover:text-brand-accent transition-colors font-medium"
               >
                 {t(link.translationKey)}
@@ -92,7 +92,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.id}
-                href={link.href}
+                href={isHomePage ? link.href : `/${link.href}`}
                 className="block py-3 text-white/90 hover:text-brand-accent font-medium border-b border-brand-secondary last:border-0"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
