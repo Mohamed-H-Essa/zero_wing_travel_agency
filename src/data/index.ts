@@ -426,7 +426,7 @@ export const footerLinks = {
     { id: 'destinations', href: '#destinations', translationKey: 'footer.links.destinations' },
     { id: 'tours', href: '#tours', translationKey: 'footer.links.tours' },
     { id: 'about', href: '#about', translationKey: 'footer.links.about' },
-    { id: 'faqs', href: '#faqs', translationKey: 'footer.links.faqs' },
+    { id: 'faqs', href: '/faq', translationKey: 'footer.links.faqs' },
   ],
   policies: [
     { id: 'privacy', href: '/privacy', translationKey: 'footer.links.privacy' },

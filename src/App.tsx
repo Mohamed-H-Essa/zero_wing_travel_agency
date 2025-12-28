@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Home from './pages/Home';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import FAQ from './pages/FAQ';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
     </>
   );

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
@@ -12,15 +13,21 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 20);
   });
 
+  // Always solid if not home page, otherwise depends on scroll
+  const isSolid = !isHomePage || isScrolled;
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isSolid ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}

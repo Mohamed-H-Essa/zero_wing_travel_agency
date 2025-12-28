@@ -143,5 +143,43 @@
         "content": "If you have questions regarding this policy, please contact us at: 📩 contact@zerowingegypt.com"
       }
     ]
+  },
+  "faq_page": {
+    "title": "Frequently Asked Questions (FAQs)",
+    "intro": "",
+    "sections": [
+      {
+        "question": "What is Zero Wing?",
+        "answer": "Zero Wing is a helping-hand service designed to support travelers and connect them with authentic local experiences across Egypt. We focus on people, culture, and real connections — not just traditional tourist routes."
+      },
+      {
+        "question": "Is Zero Wing a travel agency?",
+        "answer": "No. Zero Wing is not a traditional travel agency. We act as a support and connection platform, helping travelers find trusted local assistance, services, and experiences based on their needs."
+      },
+      {
+        "question": "Do you charge for your services?",
+        "answer": "Some assistance and guidance may be offered free of charge, while other services may involve fees depending on the request and third-party providers. Any costs will always be communicated clearly before confirmation."
+      },
+      {
+        "question": "How can I contact Zero Wing?",
+        "answer": "You can reach us via email, social media, or messaging platforms such as WhatsApp. All contact details are available on our website and social pages."
+      },
+      {
+        "question": "Who does Zero Wing work with?",
+        "answer": "We work with a network of local individuals and trusted service providers, including drivers, hosts, guides, and small businesses. Our goal is to connect travelers with reliable, local support."
+      },
+      {
+        "question": "Is Zero Wing available across all of Egypt?",
+        "answer": "We aim to provide assistance across different regions of Egypt. Availability may vary depending on location and timing, but we always try to help or guide you to the right solution."
+      },
+      {
+        "question": "Is my personal information safe with Zero Wing?",
+        "answer": "Yes. We respect your privacy and only collect the information necessary to communicate with you and assist with your requests. We do not sell or misuse personal data."
+      },
+      {
+        "question": "Can Zero Wing help in urgent situations?",
+        "answer": "We do our best to respond quickly and offer guidance in urgent situations. However, availability depends on circumstances, location, and local conditions."
+      }
+    ]
   }
 }
