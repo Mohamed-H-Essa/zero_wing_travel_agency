@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { footerLinks, socialLinks } from '../data';
 import logo from '../assets/logo_with_bg_but_rounded.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -43,9 +44,15 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.policies.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="hover:text-brand-accent transition-colors">
-                    {t(link.translationKey)}
-                  </a>
+                  {link.href.startsWith('/') ? (
+                    <Link to={link.href} className="hover:text-brand-accent transition-colors">
+                      {t(link.translationKey)}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="hover:text-brand-accent transition-colors">
+                      {t(link.translationKey)}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

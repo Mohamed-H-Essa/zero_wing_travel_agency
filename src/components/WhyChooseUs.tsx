@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { features } from '../data';
+import { features, contactInfo } from '../data';
 
 export default function WhyChooseUs() {
   const { t, i18n } = useTranslation();
@@ -55,12 +55,17 @@ export default function WhyChooseUs() {
             {t('why_choose_us.cta_subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-brand-accent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-all duration-200 shadow-lg hover:shadow-xl">
-              {t('why_choose_us.plan_trip')}
-            </button>
-            <button className="bg-transparent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200 border-2 border-brand-accent">
+            <a 
+              href={contactInfo.whatsapp.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-accent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              {t('nav.book_now')}
+            </a>
+            {/* <button className="bg-transparent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200 border-2 border-brand-accent">
               {t('why_choose_us.view_all')}
-            </button>
+            </button> */}
           </div>
         </motion.div>
       </div>

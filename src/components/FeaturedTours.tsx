@@ -80,11 +80,11 @@ export default function FeaturedTours() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-brand-primary text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-brand-secondary transition-colors shadow-lg hover:shadow-xl">
             {t('featured_tours.view_all')}
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
