@@ -6,7 +6,8 @@
     "about": "About",
     "faqs": "FAQs",
     "contact": "Contact",
-    "book_now": "Book Now"
+    "book_now": "Book Now",
+    "back_to_home": "Back to Home"
   },
   "hero": {
     "overline": "ESCAPE THE EXPECTED",
@@ -78,5 +79,69 @@
     "email": "Send Email",
     "call": "Call Us Now",
     "availability": "Available 24/7 to help with bookings, questions, or special requests"
+  },
+  "terms_page": {
+    "title": "Terms & Conditions",
+    "intro": "By accessing or using Zero Wing’s website and services, you agree to the following terms.",
+    "sections": [
+      {
+        "title": "Service Description",
+        "content": "Zero Wing operates as a support and connection platform, helping individuals access local assistance, experiences, and services. We may connect users with third-party providers such as drivers, hosts, or guides."
+      },
+      {
+        "title": "Third-Party Services",
+        "content": "Zero Wing is not responsible for the actions, performance, or conduct of third-party providers. Any agreements or transactions with third parties are made directly between the user and the provider."
+      },
+      {
+        "title": "Service Availability",
+        "content": "Services are subject to availability and may vary based on location, timing, and circumstances. We do not guarantee specific outcomes."
+      },
+      {
+        "title": "User Responsibility",
+        "content": "Users are responsible for providing accurate information and for their own decisions when engaging with recommended services."
+      },
+      {
+        "title": "Limitation of Liability",
+        "content": "Zero Wing shall not be liable for any direct or indirect loss, injury, or damages arising from the use of our services or third-party interactions."
+      },
+      {
+        "title": "Right to Refuse Service",
+        "content": "We reserve the right to refuse service at our discretion."
+      },
+      {
+        "title": "Changes to Terms",
+        "content": "These terms may be updated at any time without prior notice. Continued use of the website constitutes acceptance of the updated terms."
+      }
+    ]
+  },
+  "privacy_page": {
+    "title": "Privacy Policy",
+    "intro": "At Zero Wing, we respect your privacy and are committed to protecting your personal information.",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "content": "We may collect basic personal information such as your name, email address, phone number, and any details you choose to share when contacting us through our website, email, or social media platforms."
+      },
+      {
+        "title": "How We Use Your Information",
+        "content": "Your information is used solely to respond to inquiries, provide assistance, coordinate services, and improve our offerings."
+      },
+      {
+        "title": "Data Sharing",
+        "content": "We do not sell, trade, or rent your personal information to third parties. Information may only be shared with trusted partners when necessary to fulfill a request, and only with your consent."
+      },
+      {
+        "title": "Data Protection",
+        "content": "We take reasonable measures to protect your information against unauthorized access or misuse."
+      },
+      {
+        "title": "Your Rights",
+        "content": "You may request access, correction, or deletion of your personal information at any time by contacting us."
+      },
+      {
+        "title": "Contact",
+        "content": "If you have questions regarding this policy, please contact us at: 📩 contact@zerowingegypt.com"
+      }
+    ]
   }
 }

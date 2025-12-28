@@ -430,8 +430,8 @@ export const footerLinks = {
     { id: 'contact', href: '#contact', translationKey: 'footer.links.contact' },
   ],
   policies: [
-    { id: 'privacy', href: '#', translationKey: 'footer.links.privacy' },
-    { id: 'terms', href: '#', translationKey: 'footer.links.terms' },
+    { id: 'privacy', href: '/privacy', translationKey: 'footer.links.privacy' },
+    { id: 'terms', href: '/terms', translationKey: 'footer.links.terms' },
     { id: 'cancellation', href: '#', translationKey: 'footer.links.cancellation' },
     { id: 'payment', href: '#', translationKey: 'footer.links.payment' },
     { id: 'insurance', href: '#', translationKey: 'footer.links.insurance' },
