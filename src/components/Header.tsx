@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import { navLinks, contactInfo } from '../data';
@@ -21,18 +21,43 @@ export default function Header() {
     setIsScrolled(latest > 20);
   });
 
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobileMenuOpen]);
+
   // Always solid if not home page, otherwise depends on scroll
   const isSolid = !isHomePage || isScrolled;
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isSolid ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 z-40"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <motion.header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+          isSolid ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center space-x-3">
@@ -81,41 +106,44 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <motion.div 
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-brand-primary/95 backdrop-blur-md border-t border-brand-secondary"
-        >
-          <div className="px-4 pt-2 pb-6 space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={isHomePage ? link.href : `/${link.href}`}
-                className="block py-3 text-white/90 hover:text-brand-accent font-medium border-b border-brand-secondary last:border-0"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t(link.translationKey)}
-              </a>
-            ))}
-            <div className="pt-4 space-y-4">
-              <a href={contactInfo.phone.link} className="flex items-center space-x-2 text-white/90">
-                <Phone size={18} />
-                <span className="font-medium">{contactInfo.phone.display}</span>
-              </a>
-              <a 
-                href={contactInfo.whatsapp.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors text-center block"
-              >
-                {t('nav.book_now')}
-              </a>
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-brand-primary/95 backdrop-blur-md border-t border-brand-secondary"
+          >
+            <div className="px-4 pt-2 pb-6 space-y-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={isHomePage ? link.href : `/${link.href}`}
+                  className="block py-3 text-white/90 hover:text-brand-accent font-medium border-b border-brand-secondary last:border-0"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {t(link.translationKey)}
+                </a>
+              ))}
+              <div className="pt-4 space-y-4">
+                <a href={contactInfo.phone.link} className="flex items-center space-x-2 text-white/90">
+                  <Phone size={18} />
+                  <span className="font-medium">{contactInfo.phone.display}</span>
+                </a>
+                <a 
+                  href={contactInfo.whatsapp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors text-center block"
+                >
+                  {t('nav.book_now')}
+                </a>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
-    </motion.header>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      </motion.header>
+    </>
   );
 }
