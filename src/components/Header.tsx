@@ -51,9 +51,14 @@ export default function Header() {
               <Phone size={18} />
               <span className="font-medium">{contactInfo.phone.display}</span>
             </a>
-            <button className="bg-brand-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors">
+            <a 
+              href={contactInfo.whatsapp.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors"
+            >
               {t('nav.book_now')}
-            </button>
+            </a>
           </div>
 
           <div className="lg:hidden flex items-center space-x-4">
@@ -92,9 +97,14 @@ export default function Header() {
                 <Phone size={18} />
                 <span className="font-medium">{contactInfo.phone.display}</span>
               </a>
-              <button className="w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors">
+              <a 
+                href={contactInfo.whatsapp.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors text-center block"
+              >
                 {t('nav.book_now')}
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>

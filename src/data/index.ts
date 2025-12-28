@@ -427,14 +427,10 @@ export const footerLinks = {
     { id: 'tours', href: '#tours', translationKey: 'footer.links.tours' },
     { id: 'about', href: '#about', translationKey: 'footer.links.about' },
     { id: 'faqs', href: '#faqs', translationKey: 'footer.links.faqs' },
-    { id: 'contact', href: '#contact', translationKey: 'footer.links.contact' },
   ],
   policies: [
     { id: 'privacy', href: '/privacy', translationKey: 'footer.links.privacy' },
     { id: 'terms', href: '/terms', translationKey: 'footer.links.terms' },
-    { id: 'cancellation', href: '#', translationKey: 'footer.links.cancellation' },
-    { id: 'payment', href: '#', translationKey: 'footer.links.payment' },
-    { id: 'insurance', href: '#', translationKey: 'footer.links.insurance' },
   ],
   contact: [
     { id: 'phone', icon: Phone, text: contactInfo.phone.display, href: contactInfo.phone.link },
