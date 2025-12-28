@@ -317,80 +317,106 @@ export const features = [
 
 export const faqs = [
   { 
-    id: 'visa',
+    id: 'what_is_zero_wing',
     content: {
       en: {
-        question: "Do I need a visa to visit Egypt?",
-        answer: "Most visitors can obtain a visa on arrival at Egyptian airports for $25 USD. Alternatively, you can apply for an e-visa online before your trip. We provide detailed visa information and assistance with your booking."
+        question: "What is Zero Wing?",
+        answer: "Zero Wing is a helping-hand service designed to support travelers and connect them with authentic local experiences across Egypt. We focus on people, culture, and real connections — not just traditional tourist routes."
       },
       ar: {
-        question: "هل أحتاج إلى تأشيرة لزيارة مصر؟",
-        answer: "يحتاج معظم الزوار إلى تأشيرة. يمكنك الحصول على تأشيرة عند الوصول إلى المطار أو التقدم بطلب للحصول على تأشيرة إلكترونية عبر الإنترنت."
+        question: "ما هي زيرو وينج؟",
+        answer: "زيرو وينج هي خدمة مساعدة مصممة لدعم المسافرين وربطهم بتجارب محلية أصيلة في جميع أنحاء مصر. نحن نركز على الناس والثقافة والروابط الحقيقية - وليس فقط الطرق السياحية التقليدية."
       }
     }
   },
   { 
-    id: 'best_time',
+    id: 'is_agency',
     content: {
       en: {
-        question: "What is the best time to visit Egypt?",
-        answer: "The ideal time is October to April when temperatures are mild (15-25°C). Summer months (May-September) can be very hot, especially in Upper Egypt. We operate year-round and can recommend the best times for specific destinations."
+        question: "Is Zero Wing a travel agency?",
+        answer: "No. Zero Wing is not a traditional travel agency. We act as a support and connection platform, helping travelers find trusted local assistance, services, and experiences based on their needs."
       },
       ar: {
-        question: "ما هو أفضل وقت لزيارة مصر؟", // Added missing AR translation
-        answer: "الوقت المثالي هو من أكتوبر إلى أبريل حيث تكون درجات الحرارة معتدلة. أشهر الصيف يمكن أن تكون حارة جداً."
+        question: "هل زيرو وينج وكالة سفر؟",
+        answer: "لا. زيرو وينج ليست وكالة سفر تقليدية. نحن نعمل كمنصة دعم وتوصيل، نساعد المسافرين في العثور على مساعدة وخدمات وتجارب محلية موثوقة بناءً على احتياجاتهم."
       }
     }
   },
   { 
-    id: 'families',
+    id: 'charges',
     content: {
       en: {
-        question: "Are your tours suitable for families with children?",
-        answer: "Absolutely! Many of our tours are family-friendly. We can customize itineraries to suit children of all ages, with engaging activities and comfortable pacing. Our guides are experienced in making history come alive for young travelers."
+        question: "Do you charge for your services?",
+        answer: "Some assistance and guidance may be offered free of charge, while other services may involve fees depending on the request and third-party providers. Any costs will always be communicated clearly before confirmation."
       },
       ar: {
-        question: "هل جولاتكم مناسبة للعائلات؟", // Added missing AR translation
-        answer: "بالتأكيد! العديد من جولاتنا مناسبة للعائلات. يمكننا تخصيص مسارات الرحلات لتناسب الأطفال من جميع الأعمار."
+        question: "هل تتقاضون رسومًا مقابل خدماتكم؟",
+        answer: "قد يتم تقديم بعض المساعدة والتوجيه مجانًا، بينما قد تنطوي خدمات أخرى على رسوم حسب الطلب ومقدمي الخدمات من جهات خارجية. سيتم دائمًا توضيح أي تكاليف بوضوح قبل التأكيد."
       }
     }
   },
   { 
-    id: 'included',
+    id: 'contact',
     content: {
       en: {
-        question: "What is included in the tour price?",
-        answer: "Our tour prices include expert guides, entrance fees, transportation, and specified meals. International flights, personal expenses, tips, and optional activities are not included. Full details are provided on each tour page."
+        question: "How can I contact Zero Wing?",
+        answer: "You can reach us via email, social media, or messaging platforms such as WhatsApp. All contact details are available on our website and social pages."
       },
       ar: {
-        question: "ماذا يشمل سعر الجولة؟", // Added missing AR translation
-        answer: "تشمل أسعارنا المرشدين الخبراء ورسوم الدخول والمواصلات والوجبات المحددة."
+        question: "كيف يمكنني التواصل مع زيرو وينج؟",
+        answer: "يمكنك التواصل معنا عبر البريد الإلكتروني أو وسائل التواصل الاجتماعي أو منصات المراسلة مثل واتساب. جميع تفاصيل الاتصال متاحة على موقعنا وصفحاتنا الاجتماعية."
       }
     }
   },
   { 
-    id: 'safety',
+    id: 'partners',
     content: {
       en: {
-        question: "Is Egypt safe for tourists?",
-        answer: "Yes, Egypt is safe for tourists. We work with trusted local partners, follow security protocols, and monitor destinations closely. Our guides are trained in safety procedures and tourist areas have strong security presence."
+        question: "Who does Zero Wing work with?",
+        answer: "We work with a network of local individuals and trusted service providers, including drivers, hosts, guides, and small businesses. Our goal is to connect travelers with reliable, local support."
       },
       ar: {
-        question: "هل السفر إلى مصر آمن؟",
-        answer: "نعم، يزور ملايين السياح مصر بأمان كل عام. المناطق السياحية مؤمنة جيدًا."
+        question: "مع من تعمل زيرو وينج؟",
+        answer: "نحن نعمل مع شبكة من الأفراد المحليين ومقدمي الخدمات الموثوق بهم، بما في ذلك السائقين والمضيفين والمرشدين والشركات الصغيرة. هدفنا هو ربط المسافرين بدعم محلي موثوق."
       }
     }
   },
   { 
-    id: 'cancellation',
+    id: 'availability',
     content: {
       en: {
-        question: "What's your cancellation policy?",
-        answer: "Free cancellation up to 48 hours before your tour for a full refund. Cancellations within 48 hours are subject to a 50% charge. We recommend travel insurance for added protection. Full terms are available during booking."
+        question: "Is Zero Wing available across all of Egypt?",
+        answer: "We aim to provide assistance across different regions of Egypt. Availability may vary depending on location and timing, but we always try to help or guide you to the right solution."
       },
       ar: {
-        question: "ما هي سياسة الإلغاء؟", // Added missing AR translation
-        answer: "إلغاء مجاني حتى 48 ساعة قبل جولتك لاسترداد كامل المبلغ."
+        question: "هل زيرو وينج متاحة في جميع أنحاء مصر؟",
+        answer: "نحن نهدف إلى تقديم المساعدة في مختلف مناطق مصر. قد يختلف التوافر حسب الموقع والتوقيت، لكننا نحاول دائمًا مساعدتك أو توجيهك إلى الحل الصحيح."
+      }
+    }
+  },
+  { 
+    id: 'privacy',
+    content: {
+      en: {
+        question: "Is my personal information safe with Zero Wing?",
+        answer: "Yes. We respect your privacy and only collect the information necessary to communicate with you and assist with your requests. We do not sell or misuse personal data."
+      },
+      ar: {
+        question: "هل معلوماتي الشخصية آمنة مع زيرو وينج؟",
+        answer: "نعم. نحن نحترم خصوصيتك ونجمع فقط المعلومات اللازمة للتواصل معك والمساعدة في طلباتك. نحن لا نبيع أو نسيء استخدام البيانات الشخصية."
+      }
+    }
+  },
+  { 
+    id: 'urgent',
+    content: {
+      en: {
+        question: "Can Zero Wing help in urgent situations?",
+        answer: "We do our best to respond quickly and offer guidance in urgent situations. However, availability depends on circumstances, location, and local conditions."
+      },
+      ar: {
+        question: "هل يمكن لزيرو وينج المساعدة في الحالات العاجلة؟",
+        answer: "نحن نبذل قصارى جهدنا للاستجابة بسرعة وتقديم التوجيه في الحالات العاجلة. ومع ذلك، يعتمد التوافر على الظروف والموقع والأحوال المحلية."
       }
     }
   },
@@ -426,7 +452,6 @@ export const footerLinks = {
     { id: 'destinations', href: '#destinations', translationKey: 'footer.links.destinations' },
     { id: 'tours', href: '#tours', translationKey: 'footer.links.tours' },
     { id: 'about', href: '#about', translationKey: 'footer.links.about' },
-    { id: 'faqs', href: '/faq', translationKey: 'footer.links.faqs' },
   ],
   policies: [
     { id: 'privacy', href: '/privacy', translationKey: 'footer.links.privacy' },
